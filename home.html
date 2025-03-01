@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://t4.ftcdn.net/jpg/04/19/26/97/360_F_419269782_9LsP3TQndMVnZ2j3ZhTPhMjaqQpFAth9.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar button {
+            background: none;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .navbar button:hover {
+            color: #00c6ff;
+        }
+        .welcome-section {
+            margin-top: 80px;
+        }
+        .resume-btn {
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .resume-btn:hover {
+            transform: scale(1.05);
+        }
+        /* Flash Cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+        .card h3 {
+            color: #00c6ff;
+            margin-bottom: 10px;
+        }
+        /* Contact Section */
+        .contact-section {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .contact-icons a {
+            color: white;
+            margin: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .contact-icons a:hover {
+            color: #00c6ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <button onclick="location.href='home.html'">🏠 Home</button>
+        <button onclick="logout()">🔓 Logout</button>
+    </div>
+    
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <h1>Welcome to My Portfolio</h1>
+        <h2>Your Name</h2>
+        <a href="https://drive.google.com/file/d/YOUR_RESUME_LINK/view" target="_blank" class="resume-btn">📄 Download Resume</a>
+    </div>
+    
+    <!-- Flash Cards Section -->
+    <div class="card-container">
+        <div class="card">
+            <h3>Experience</h3>
+            <p>Details about work experience, internships, and projects.</p>
+        </div>
+        <div class="card">
+            <h3>Skills</h3>
+            <p>Programming languages, tools, and technical abilities.</p>
+        </div>
+        <div class="card">
+            <h3>Certifications</h3>
+            <p>Relevant certifications, online courses, and achievements.</p>
+        </div>
+        <div class="card">
+            <h3>Projects</h3>
+            <p>Notable projects with descriptions and technologies used.</p>
+        </div>
+        <div class="card">
+            <h3>Education</h3>
+            <p>Academic background, degrees, and institutions attended.</p>
+        </div>
+        <div class="card">
+            <h3>Achievements</h3>
+            <p>Awards, recognitions, and notable accomplishments.</p>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +1234567890</p>
+        <p>Address: Your Location</p>
+        <div class="contact-icons">
+            <a href="#">🔗 LinkedIn</a>
+            <a href="#">🌐 Website</a>
+            <a href="#">📸 Instagram</a>
+        </div>
+    </div>
+    
+    <script>
+        function logout() {
+            sessionStorage.removeItem("loggedInUser");
+            window.location.href = "exit.html";
+        }
+    </script>
+</body>
+</html>
